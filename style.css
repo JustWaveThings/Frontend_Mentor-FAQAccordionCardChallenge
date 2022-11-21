@@ -5,10 +5,13 @@
   --color-Very-darkgrayishblue: hsl(237, 12%, 33%);
   --color-Darkgrayishblue: hsl(240, 6%, 50%);
   --color-Softviolet-background: hsl(273, 75%, 66%);
+  --color-Softviolet-transparent-background: hsla(273, 75%, 66%, 0.9);
   --color-Softblue-background: hsl(240, 73%, 65%);
+  --color-Softblue-transparent-background: hsla(240, 73%, 65%, 0.9);
   --color-Very-dark-desaturated-blue-text: hsl(238, 29%, 16%);
   --color-Softred-text: hsl(14, 88%, 65%);
 }
+
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -118,6 +121,10 @@ nav,
 section {
   display: block;
 }
+/* 
+body * {
+  border: 1px solid pink;
+} */
 
 body {
   line-height: 1.6;
@@ -151,6 +158,48 @@ table {
 
 /* END CSS RESET */
 
+body {
+  height: 100vh;
+  background: linear-gradient(var(--color-Softviolet-background),var(--color-Softblue-background));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  height: 70vh;
+  width: 65vw;
+  border-radius: 25px;
+  box-shadow: 0px 20px 45px -27px #000000;
+  background-color: #fff;
+}
+
+.container{
+  display: flex;
+  height: 100%;
+  width: 50%;
+}
+
+.left{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: url(images/illustration-woman-online-desktop.svg);
+  background-repeat: no-repeat;
+  background-position-x:  1400%;
+  background-position-y: 50%;
+  position: relative; 
+  filter: drop-shadow(0px 80px 1px hsl(240, 5%, 91%));
+}
+
+.left > img {
+  position: absolute;
+  top: 43%;
+  left: -95px;
+}
+
+
 
 footer {
   align-self: center;
@@ -165,6 +214,6 @@ footer {
 }
 
 .attribution a {
-  color: var(--color-Very-Dark-Magenta);
+  color: var(--color-Softred-text);
   text-decoration: none;
 }
