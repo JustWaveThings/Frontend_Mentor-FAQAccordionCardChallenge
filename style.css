@@ -121,10 +121,10 @@ nav,
 section {
   display: block;
 }
-/* 
+
 body * {
   border: 1px solid pink;
-} */
+}
 
 body {
   line-height: 1.6;
@@ -179,27 +179,28 @@ body {
   display: flex;
   height: 100%;
   width: 50%;
+  position: relative;
 }
 
-.left{
+.left {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background: url(images/illustration-woman-online-desktop.svg);
   background-repeat: no-repeat;
-  background-position-x:  1400%;
+  background-position-x:  1300%;
   background-position-y: 50%;
   position: relative; 
   filter: drop-shadow(0px 80px 1px hsl(240, 5%, 91%));
+  
 }
 
-.left > img {
+
+.box {
   position: absolute;
   top: 43%;
   left: -95px;
 }
-
-
 
 footer {
   align-self: center;
