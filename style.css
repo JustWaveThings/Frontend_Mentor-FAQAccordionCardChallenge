@@ -285,6 +285,7 @@ body {
 }
 
 .question:hover {
+  transition: all 1s ease;
   color: var(--color-Softred-text);
   cursor: pointer;
 }
